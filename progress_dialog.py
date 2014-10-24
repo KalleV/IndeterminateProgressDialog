@@ -33,6 +33,7 @@ class IndeterminateProgressDialog(QDialog):
         super().__init__(parent, Qt.WindowCloseButtonHint)
         self.ui = Ui_ProgressDialog()
         self.ui.setupUi(self)
+        self.ui.details_button.hide()
         self.set_label_text(window_label)
 
         self.details_textbox = DetailsTextBox()
@@ -48,11 +49,16 @@ class IndeterminateProgressDialog(QDialog):
         super().closeEvent(event)
 
     def set_detailed_text(self, text):
+        if text:
+            self.ui.details_button.show()
+            self.details_textbox.set_text(text)
+        else:
+            self.ui.details_button.hide()
         self.details_textbox.set_text(text)
-        
+
     def get_detailed_text(self):
         self.details_textbox.text()
-        
+
     def set_label_text(self, text):
         """Changes the text displayed above the progress bar"""
         self.ui.label.setText(text)
