@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'progress_dialog.ui'
 #
-# Created: Mon Oct 20 17:51:49 2014
+# Created: Fri Oct 24 22:05:47 2014
 #      by: PyQt5 UI code generator 5.3.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,7 +13,7 @@ class Ui_ProgressDialog(object):
     def setupUi(self, ProgressDialog):
         ProgressDialog.setObjectName("ProgressDialog")
         ProgressDialog.setWindowModality(QtCore.Qt.WindowModal)
-        ProgressDialog.resize(361, 97)
+        ProgressDialog.resize(362, 97)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -23,7 +23,7 @@ class Ui_ProgressDialog(object):
         ProgressDialog.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         ProgressDialog.setWindowTitle("")
         ProgressDialog.setSizeGripEnabled(False)
-        ProgressDialog.setModal(False)
+        ProgressDialog.setModal(True)
         self.gridLayout = QtWidgets.QGridLayout(ProgressDialog)
         self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
         self.gridLayout.setContentsMargins(-1, 9, -1, 9)
